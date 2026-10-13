@@ -1,0 +1,44 @@
+{
+  "name": "CPA Manager Plus",
+  "slug": "cpa-manager-plus",
+  "categories": [10, 20],
+  "date_created": "2026-10-13",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": 18317,
+  "documentation": "https://seakee.github.io/CPA-Manager-Plus/docs/en/",
+  "website": "https://seakee.github.io/CPA-Manager-Plus/",
+  "repository": "https://github.com/seakee/CPA-Manager-Plus",
+  "architectures": ["amd64", "arm64"],
+  "logo": "https://raw.githubusercontent.com/seakee/CPA-Manager-Plus/main/logo.svg",
+  "description": "Self-hosted management panel and observability dashboard for CLIProxyAPI: request history, usage and cost analytics, quota tracking, and account health.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/cpa-manager-plus.sh",
+      "config_path": "/opt/cpa-manager-plus/config.json",
+      "resources": {
+        "cpu": 1,
+        "ram": 1024,
+        "hdd": 4,
+        "os": "Debian",
+        "version": "13"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "Requires an existing CLIProxyAPI instance. Connect it in the panel's first-time setup using the admin key from /etc/cpa-manager-plus/cpamp-admin-key inside the container.",
+      "type": "info"
+    },
+    {
+      "text": "Recommended CLIProxyAPI version v7.3.4 or newer; request monitoring needs v6.10.8 or newer.",
+      "type": "info"
+    }
+  ]
+}
