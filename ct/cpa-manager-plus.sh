@@ -20,6 +20,8 @@ var_unprivileged="${var_unprivileged:-1}"
 
 header_info "$APP"
 variables
+NSAPP="cpa-manager-plus"
+var_install="${NSAPP}-install"
 color
 catch_errors
 
